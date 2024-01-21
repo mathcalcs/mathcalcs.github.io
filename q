@@ -9,4 +9,3 @@ https://www.coolmathgames.com/0-papas-freezeria/play
 https://www.coolmathgames.com/0-learn-to-fly-2/play
 https://www.coolmathgames.com/0-penalty-kick-online/play
 https://www.coolmathgames.com/0-tail-of-the-dragon/play
-https://www.coolmathgames.com/0-bob-the-robber/play
