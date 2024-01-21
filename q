@@ -6,4 +6,3 @@ https://cache.armorgames.com/files/games/idle-breakout-18584/index.html?v=155245
 https://www.coolmathgames.com/0-run-3/play
 https://www.coolmathgames.com/0-slice-master/play
 https://www.coolmathgames.com/0-papas-freezeria/play
-https://www.coolmathgames.com/0-learn-to-fly-2/play
