@@ -7,4 +7,3 @@ https://www.coolmathgames.com/0-run-3/play
 https://www.coolmathgames.com/0-slice-master/play
 https://www.coolmathgames.com/0-papas-freezeria/play
 https://www.coolmathgames.com/0-learn-to-fly-2/play
-https://www.coolmathgames.com/0-penalty-kick-online/play
