@@ -22,7 +22,7 @@
 		});
 		window.alert = function(e) {console.log(e)};
 	</script>
-	<link rel='shortcut icon' type="image/png" href="favicon.png?v2">
+	<link rel='shortcut icon' type="image/png" href="favicon.png?v2"> cpmstar
 	
 	<link rel="canonical" href="index.htm">
 	<meta property="og:title" content="1v1.LOL">
@@ -159,80 +159,8 @@
 		}
 		
 		window.addEventListener('resize', injectAdByWindowSize);
-		
-		function injectAdByWindowSize() {
-			// Inject small ad if screen is small, or large ad if screen is large
-			if (window.innerHeight < 900) {
-				if (document.getElementById("adRectangleBottom") == null) {
-					var el = document.getElementsByClassName("ad-rectangle-bottom")[0];
-					el.id = "adRectangleBottom";
-					cpmstarAPI({kind:'go',module:'POOL 83025', config: { conditions: { target: { el: el, kind: 'replace' }}}});
-				}
-			}
-			else {
-				if (document.getElementById("adLeaderboardBottom") == null) {
-					var el = document.getElementsByClassName("ad-leaderboard-bottom")[0];
-					el.id = "adLeaderboardBottom";
-					cpmstarAPI({kind:'go',module:'POOL 85420', config: { conditions: { target: { el: el, kind: 'replace' }}}});
-				}
-			}
-		}
-		
-		injectAdByWindowSize();
 
 		var refreshNextTime = true;
-
-		function showAds() {
-
-			document.getElementsByClassName("ad-rectangle-bottom")[0].style.display = "block";
-			document.getElementsByClassName("ad-leaderboard-bottom")[0].style.display = "block";
-			document.getElementById("adRectangleUpper").style.display = "block";
-
-			if (typeof counter === 'undefined') {
-				startCounter();
-				resumeCounter();
-			}
-			else {
-				resumeCounter();
-				refresh();
-			}
-		}
-
-		function hideAds() {
-
-			document.getElementsByClassName("ad-rectangle-bottom")[0].style.display = "none";
-			document.getElementsByClassName("ad-leaderboard-bottom")[0].style.display = "none";
-			document.getElementById("adRectangleUpper").style.display = "none";
-
-			pauseCounter();
-		}
-
-		function refresh() {
-
-			//console.log("time since ads refresh = " + timeSinceRefresh + " seconds");
-			//console.log("time ads visible = " + timeAdsVisible + " seconds");
-
-			if (timeSinceRefresh <= 30 || timeAdsVisible <= 2) {
-				//console.log("don't refresh");
-				return;
-			}
-
-			if (document.getElementById("adRectangleBottom") != null &&
-				window.getComputedStyle(document.getElementsByClassName("ad-smallscreen")[0]).display != "none") {
-				cpmstarAPI({ kind: "adcmd", module: "POOL 83023", command: "refresh" });
-			}
-			
-			if (document.getElementById("adLeaderboardBottom") != null &&
-				window.getComputedStyle(document.getElementsByClassName("ad-largescreen")[0]).display != "none") {
-				cpmstarAPI({ kind: "adcmd", module: "POOL 85420", command: "refresh" });
-			}
-			
-			cpmstarAPI({ kind: "adcmd", module: "POOL 83025", command: "refresh" });
-
-			timeSinceRefresh = 0;
-			timeAdsVisible = 0;
-			//console.log("refresh ads");
-		}
 
 		window.onfocus = function () {
 			//console.log("onfocus");
@@ -250,23 +178,6 @@
 		var counter;
 		var adsVisible = false;
 
-		function startCounter() {
-			timeSinceRefresh++;
-			if (adsVisible)
-				timeAdsVisible++;
-
-			counter = setTimeout(function () {
-				startCounter();
-			}, 1000);
-		}
-
-		function resumeCounter() {
-			adsVisible = true;
-		}
-
-		function pauseCounter() {
-			adsVisible = false;
-		}
 	</script>
 	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
 	<script src="firebasejs/7.2.1/firebase-app.js"></script>
@@ -292,8 +203,6 @@
 		initRemoteConfig();
 	</script>
 
-	<script src="js/windowResize.js"></script>
-	<script src="js/adblockManager.js"></script>
 	<script src="js/macUserAgent.js"></script>
 	<script src="js/visibilityChangeListener.js"></script>
 	<script>
@@ -304,7 +213,6 @@
 		
 		fixMacUserAgent();
 	</script>
-	<!--<script src="js/IronSourceInter.js"></script>-->
 </body>
 
 </html>
