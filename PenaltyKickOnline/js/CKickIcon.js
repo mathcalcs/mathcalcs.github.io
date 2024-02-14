@@ -1,1 +1,0 @@
-function CKickIcon(t,i,n,e){var o,h=e;this._init=function(t,i,n){var e=n.getFrameBounds(0).width/3,s=n.getFrameBounds(0).height;(o=createSprite(n,"empty",e/2,s/2,e,s)).x=t,o.y=i,h.addChild(o)},this.changeState=function(t){o.gotoAndStop(t)},this.setVisible=function(t){o.visible=t},this._init(t,i,n)}
