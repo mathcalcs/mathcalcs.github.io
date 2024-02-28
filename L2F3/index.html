@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embed SWF with Ruffle</title>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+  </head>
+  <body>
+    <object width="1000" height="700">
+      <param name="movie" value="https://example.com/game.swf">
+      <embed src="https://example.com/game.swf">
+    </embed>
+    </object>
+    <noscript>
+      <object width="1000" height="700">
+        <param name="movie" value="https://example.com/game.swf">
+        <embed src="https://example.com/game.swf">
+      </embed>
+      </object>
+    </noscript>
+  </body>
+</html>
