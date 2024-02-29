@@ -3,15 +3,21 @@
   <head>
     <title>Learn 2 fly 3</title>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <style>
+      Ruffle{
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
-    <object style="height: 100%; width: 100%">
+    <object class="Ruffle">
       <param name="movie" value="learn-to-fly-3.swf">
       <embed src="learn-to-fly-3.swf">
     </embed>
     </object>
     <noscript>
-      <object style="height: 100%; width: 100%">
+      <object class="Ruffle">
         <param name="movie" value="learn-to-fly-3.swf">
         <embed src="learn-to-fly-3.swf">
       </embed>
